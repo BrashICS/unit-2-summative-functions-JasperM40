@@ -41,9 +41,17 @@ function y_quad(a, b, c, x) {
 
 // Determine the zeros of a quadratic using user-inputs for a, b, and c
 function zeros() {
-    let x1 = -(document.getElementById("b").value)+ Math.sqrt(document.getElementById("b").value) -4 (document.getElementById("a").value)*(document.getElementById("c")/2 (document.getElementById("a").value))
-    let x2 = +(document.getElementById("b").value)+ Math.sqrt(document.getElementById("b").value) -4 (document.getElementById("a").value)*(document.getElementById("c")/2 (document.getElementById("a").value))
-    document.getElementById("quadratic_output").textContent = `The zeros are ${x1, x2}`
+    let x1 = -(Number (document.getElementById("b").value))+ Math.sqrt(Number(document.getElementById("b").value)
+    -4 * (Number(document.getElementById("a").value))*(Number(document.getElementById("c").value))) /2 * (Number(document.getElementById("a").value))
+    
+    let x2 = -(document.getElementById("b").value)
+    +
+     Math.sqrt((document.getElementById("b").value) + 4 *
+     (Number(document.getElementById("a").value)*
+     (Number(document.getElementById("c").value))))
+     /(2 *(Number(document.getElementById("a").value)))
+    console.log(x1, x2)
+     document.getElementById("quadratic_output").textContent = `The zeros are ${x1}, ${x2}`
 }
 
 // Determine the vertex of a quadratic using user-inputs for a, b, and c
